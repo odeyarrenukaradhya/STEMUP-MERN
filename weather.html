@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEATHER REPORT</title>
+    <!-- <style>
+        h1{
+            text-align: center;
+            color: white;
+            border: solid 2px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        #check{
+            color: white;
+        }
+        body{
+            background-color: rgb(5, 23, 63);
+        }
+        #input{
+            background-color: rgb(151, 183, 224);
+            width: 400px;
+            border-radius: 7px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-left:10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+        }
+        #fetch{
+            background-color: rgb(89, 145, 219);
+            border-radius: 7px;
+            margin-left:10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        } -->
+
+    <!-- </style> -->
+</head>
+<body>
+    <p id="demo"></p>
+    <!-- <p id="demo"></p>
+    <h1><b>Weather Report</h1>
+    <marquee id="check">Check the weather in your place</marquee>
+
+    <input id="input" type="text" placeholder="Enter the city name here"><br>
+
+    <button id="fetch" onclick="checkWeather()">Fetch Weather</button>
+     -->
+    
+    <script>
+         const API_KEY="84ef54a86c846d4dc5edf53e1a6e4e57";
+        const CITY="Bangalore";
+         const URL=`https://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&units=metric`;
+
+         async function getWeather(){
+             try{
+                 const res = await fetch(URL);   
+                 if(!res.ok){
+                     const err = await res.json();
+                    console.error("Error:",err.message);
+                     return;
+                 }
+                   const x=document.getElementById("demo")
+        console.log(navigator.geolocation.getCurrentPosition(showPosition));
+        console.log(window.history.go(-2));
+        function showPosition(position){
+            x.innerHTML="Latitude:"+position.coords.latitude+
+            "<br>Longitude:"+position.coords.longitude;
+        }
+                 const data = await res.json();
+                 console.log(`Weather in ${data.name}, ${data.sys.country}`);
+                 console.log(`Temperature: ${data.main.temp} Celcius`);
+                 console.log(`Feels like: ${data.main.feels_like} Celcius`);
+                 console.log(`Humidity: ${data.main.humidity}%`);
+                 console.log(`Condition: ${data.weather[0].description}`);
+                 console.log(`Wind Speed: ${data.wind.speed} m/s`);   
+             }catch(err){
+                 console.log("Fetch failed:",err.message);
+             }
+         }
+         getWeather();
+      
+    </script>
+</body>
+</html>

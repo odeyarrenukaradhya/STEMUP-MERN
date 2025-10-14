@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="window.history.go(-2)";>Go 2 pages Back</button>
+    <script>
+        localStorage.setItem("name","Renukaradhya"); //Store and retrieve data, the data will be stored in browser
+        console.log(localStorage.getItem("name"));
+
+        //another method of Store and retrieve data
+        sessionStorage.setItem("name","Odeyar");
+        console.log(sessionStorage.getItem("name"));
+        
+    </script>
+</body>
+</html>
