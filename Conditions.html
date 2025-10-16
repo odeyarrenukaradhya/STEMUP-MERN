@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condition Statements</title>
+    <link rel="icon" type="image/x-icon" href="js.png">
+</head>
+<body>
+    <h2>Conditional Statements in JavaScript</h2>
+    <input type="number" id="num" placeholder="Enter a number:">
+    <button onclick="checkConditions()">Check</button>
+
+    <p id="Output"></p>
+    <script>
+        function checkConditions(){
+            let n=Number(document.getElementById("num").value);
+            let result=" ";
+
+            //1.if condition
+            if(n>0){
+                result+="Number is positive.<br>";
+            }
+
+            //2.if..else condition
+            if(n%2===0){
+                result+="Number is even";
+            }else{
+                result+="Number is odd";
+            }
+
+            //3.if...else if..else
+            if(n<0){
+                result+="Negative number.<br>";
+            }else if(n===0){
+                result+="zero.<br>";
+            }else{
+                result+="positive number.<br>";
+            }
+
+            //4.switch
+            switch(n){
+                case 1:
+                    result+="You entered one.<br>";
+                    break;
+                case2:
+                    result+="you entered two.<br>";
+                    break;
+                default:
+                    result += "Number is neither 1 nor 2.<br>"
+            }
+
+            //5.Ternary operator
+            result += "Ternary: " + (n >= 18 ? "Eligible to vote.":"Not eligible to vote:")+"<br>"
+            document.getElementById("Output").innerHTML = result;
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping statement Demo</title>
+    <link rel="icon" type="image/x-icon" href="js.png">
+</head>
+<body>
+    <h2>Looping Statements in Javascript</h2>
+    <input type="number" id="num" placeholder="enter the number">
+    <button onclick="showLoops()">Check</button>
+
+    <p id="Output"></p>
+
+    <script>
+        function showLoops(){
+            let n=Number(document.getElementById("num").value);
+            let result="";
+        
+        //1.for loop->print 1to5
+        result += "<br>for loop:</br>";
+        for(let i=1;i<=n;i++){
+            result += i+" ";
+        }
+        result += "<br>"
+        
+
+        //2.while loop->print 1to5
+         result += "<br>while loop:</br>";
+         let j=1;
+         while(j<=n){
+            result += j+" ";
+            j++;
+         }
+         result += "<br>"
+        
+        
+         //3.do while loop->print
+         result+="<br>do...while loop:</br>";
+         let k=1;
+         do{
+            result +=k+" ";
+            k++;
+         }while(k<=n);
+         result += "<br>"
+      
+        
+
+        //4.for..in loop->object proerties
+        let person={name:"Ali",age:23,city:"banglore"};
+        result +="<b>for..in loop(object):</b>";
+        for(let key in person){
+            result += key +":"+person[key]+"|";
+        }
+        result+="<br>";
+
+        //5.for...of loop->array values
+        let arr=["apple","banana","mango"];
+        result += "<br>for..of loop(array)</br>";
+        for(let fruit of arr){
+            result +=fruit +" ";
+        }
+        result += "<br>";
+
+        document.getElementById("Output").innerHTML=result;
+    }
+    </script>
+</body>
+</html>
