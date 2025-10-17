@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUMBERS</title>
+</head>
+<body>
+    <script>
+        let x=42;//integer
+        let y=3.14159//floating point
+        let z=5e3;//exponential notation
+        let n=NaN; //not a number
+        let inf=Infinity;//infinity value
+        console.log("x:",x,"y:",y,"z:",z,"Nan:",n,"Infinity:",inf);
+
+        //-------------------------Type checking---------------------------------
+        console.log("Type of x:",typeof x);//"number"
+        console.log("Is NaN(n):",isNaN(n));//true
+        console.log("Is Finite(y):",isFinite(y));//true
+        console.log("Is Integer(x):",Number.isInteger(x));//true
+        console.log("Max safe Integer:",Number.MAX_SAFE_INTEGER);
+        console.log("Min safe Integer:",Number.MIN_SAFE_INTEGER);
+
+        //-----------------------Conversion--------------------------------------
+        let str="123.45";
+        console.log("parseInt(str):",parseInt(str));//123
+        console.log("parsefloat(str):",parseFloat(str));//123.45
+        console.log("Number(str):",Number(str));//123.45
+        console.log("Number('abc'):",Number("abc"));//NaN
+        console.log("Boolean to number:",Number(true),Number(false));//1,0
+
+        //---------------------Math Object-------------------------------------
+        //Math is a built in object for mathematical operations
+        console.log("Math.PI:",Math.PI);
+        console.log("Math.E:",Math.E);
+        console.log("Math.round(4.6):",Math.round(4.6));//5
+        console.log("Math.floor(4.9):",Math.floor(4.9));//4
+        console.log("Math.ceil(4.9):",Math.ceil(4.9));//4
+        console.log("Math.trunc(4.9):",Math.trunc(4.9));//4(removes decimals)
+
+        console.log("Math.sqrt(25):",Math.sqrt(25));//5
+        console.log("Math.pow(2,3);",Math.pow(2,3));//8
+        console.log("2 ** 3:",2 ** 3);//8(exponentiation operator)
+
+        console.log("Math.abs(-7):",Math.abs(-7));//7
+        console.log("Math.max(1,5,9):",Math.max(1,5,9));//9
+        console.log("Math.min(1,5,9):",Math.min(1,5,9));//1
+        console.log("Math.random():",Math.random());//random betmeen 0 and 1
+        console.log("Random(1-100):",Math.floor(Math.random()*100+1));
+
+        //--------------------BigInt-------------------------------
+        //For integers larger than 2^53-1 use BigInt(suffix 'n')
+        let big=123456789012345678901234567890n;
+        console.log("BigInt:",big);
+        console.log("Type of big:", typeof big );//bigint
+
+        //--------------------Important Notes---------------------
+        //1.All numbers in js are floating-point by default
+
+     
+
+        //---------------------Formatting Numbers--------------------------------
+        let num=123.456789;
+        console.log("toExponential(2):",num.toExponential(2)); //123.45e+
+        console.log("toFixed(2):",num.toFixed(2));//123.46  (Returns a string representation of the number with a specified number of digits after the decimal point.)
+
+        console.log("toPrecision:",num.toPrecision(5));//123.46  (Returns a string representation of the number to a specified total length (number of significant digits).)
+
+        console.log("toExponential:",num.toExponential(2));//1.23e+2  (Returns a string representation of the 'number in exponential notation'.)
+
+        //Number Formatting Demonstration
+        let num1=123.456789;
+        console.log("Original number:",num1);
+
+        //--------------------toFixed(n)--------------------
+        //Rounds the number to 'n' decimal places(string output)
+        console.log("toFixed(0):",num1.toFixed(0));//123(rounded to integer)
+        console.log("toFixed(2):",num1.toFixed(2));//123.46(rounded to 2 decimals)
+        console.log("toFixed(5):",num1.toFixed(5));//123.45679
+
+        //-------------------toPrecision--------------------
+        //format number 'n' total digits(before+after decimal)
+        console.log("toPrecision(2):",num1.toPrecision(2));//1.2e+2(only 2 digits total)
+        console.log("toPrecision(3):",num1.toPrecision(3));
+        console.log("toPrecision(4):",num1.toPrecision(4));
+        console.log("toPrecision(5):",num1.toPrecision(5));
+        console.log("toPrecision(6):",num1.toPrecision(6));
+        console.log("toPrecision(7):",num1.toPrecision(7));//1.23.46(5 significant digits)
+        console.log("toPrecision(8):",num1.toPrecision(8));//123.45679
+
+        //Demonstration of number.toPrecision() in j
+
+        //example 1:small precision
+        let num2=123.456;
+        console.log(num2.toPrecision(2));//OUTPUT:"1.2e+2"
+        //Explanation: With only 2 significant digits, number because 120
+        //JS shows it in scientific notation("1.2 * 10^2") instead of 120
+        
+        //Example2: Medium precision
+        let num3=123.456;console.log(num3.toPrecision(4));//OUTPUT:123.5
+        //explanation: with 4 significant digits, it can be shown as a normal decimal, so js does not use scientific notation here
+
+        //Example3: Full precision
+        console.log(num3.toPrecision(6));//OUTPUT:123.457
+        //Explanation: all digits are shown normally, no scientific notation needed
+
+        //-------------------toExponential(n)---------------
+        //converts number to exponential notation with 'n' digits after decimal
+        console.log("toExponential(1):",toExponential(1));
+        console.log("toExponential(1):",toExponential(1));
+
+    </script>
+</body>
+</html>
