@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Javascript Date Demonstration
+        //------------------------------------------------------------------------------
+        //Date is a built in object in js used to work wit dates and times.
+        //A date object represents a single point in time(inmilliseconds since jan1,1970,UTC)
+
+        //--------------------Declaration & Initialization----------------------
+        //current date and time
+        let now = new Date();
+        console.log("Current Date & Time:",now);
+        
+        //Create date with specific date string
+        let date1=new Date("2025-09-04");//yyyy-mm-dd
+        console.log("Specific Date:",date1);
+
+        //create date with year, month(0-based),day,hour,minute,second
+        let date2=new Date(2025,8,4,10,30,15);
+        console.log("Custom Date & Time:",date2);
+
+        //From timestamp(milliseconds since jan1, 1970)
+        let date3=new Date(86400000);
+        console.log("Epoch Start:",date3);
+
+        //----------------------Getting Components-------------------
+        console.log("Year:",now.getFullYear());//4-digit year
+        console.log("Month(0-11):",now.getMonth());//0=jan,11dec
+        console.log("Date(day of month):",now.getDate());
+        console.log("Day of week(0-6):",now.getDay());
+        console.log("Hours:",now.getHours());
+        console.log("Minutes:",now.getMinutes());
+        console.log("Seconds:",now.getSeconds());
+        console.log("MilliSeconds:",now.getMilliseconds());
+        console.log("Timesetup(ms since 1970):",now.getTime());
+
+        //--------------------Setting Components----------------------
+        let d=new Date();
+        d.setFullYear(2030);
+        d.setUTCMonth(11);//December
+        d.setDate(25);
+        d.setHours(12,45,0);//Hour,min,sec
+    </script>
+</body>
+</html>
