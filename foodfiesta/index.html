@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Fiesta 2025</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      * {
+        font-family: Arial, sans-serif;
+      }
+
+      p {
+        color: #555;
+        font-family: "Verdana", sans-serif;
+        font-size: large;
+      }
+
+      #main-title {
+        border: solid linear-gradient(to right, #ff9966, #f19347);
+        border-radius: 10px;
+        background: linear-gradient(to right, #ff9966, #f19347);
+        font-family: Georgia, "Times New Roman", Times, serif;
+        color: rgb(255, 68, 0);
+        padding: 10px;
+        text-align: center;
+      }
+
+      .highlight {
+        font-weight: bold;
+        font-size: 0.7cm;
+        color: #e91e63;
+      }
+
+      h1,
+      h2 {
+        text-transform: uppercase;
+      }
+
+      #food-menu li {
+        color: #763307;
+        margin: 5px 0;
+      }
+
+      input[type="text"] {
+        border: 2px solid #ccc;
+        padding: 5px;
+        background-color: #f9f9f9;
+      }
+
+      input[type="email"] {
+        border: 2px solid #ccc;
+        padding: 5px;
+        background-color: #f9f9f9;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid #ccc;
+      }
+
+      td:nth-child(2) {
+        color: rgb(0, 128, 0);
+      }
+
+      tr:hover {
+        background-color: #e5cece;
+      }
+
+      button {
+        background-color: rgba(0, 123, 255, 0.7);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: rgb(41, 244, 0);
+      }
+
+      body {
+        background-color: hsl(46, 100%, 50%);
+        padding: 20px;
+      }
+
+      a {
+        color: tomato;
+      }
+      select{
+        background-color: #ef843d;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="main-title">Food Fiesta 2025</h1>
+
+    <p class="highlight">Experience the taste of the world in one place!</p>
+
+    <div style="color: #555">
+      <b><p>August 30, 2025 at Central Park</p></b>
+    </div>
+
+    <h2>Our Menu</h2>
+    <ul id="food-menu">
+      <li><b>Tacos</b></li>
+      <li><b>Sushi</b></li>
+      <li><b>Pizza</b></li>
+      <li><b>Pad Thai</b></li>
+      <li><b>Gelato</b></li>
+    </ul>
+
+    <h2>Special Offers</h2>
+    <table>
+      <tr>
+        <th style="background-color: #f19347;">Item</th>
+        <th style="background-color: #f19347;">Discount</th>
+      </tr>
+      <tr>
+        <td>Sushi Platter</td>
+        <td>15% Off</td>
+      </tr>
+      <tr>
+        <td>Family Pizza</td>
+        <td>20% Off</td>
+      </tr>
+      <tr>
+        <td>Dessert Combo</td>
+        <td>10% Off</td>
+      </tr>
+    </table>
+
+    <h2>Contact Us</h2>
+    <form>
+      <label for="name" style="display: block; margin-top: 10px"></label>
+      <input type="text" id="name" name="name" placeholder="Name:"/>
+
+      <label for="email" style="display: block; margin-top: 10px"></label>
+      <input type="email" id="email" name="email" placeholder="Email:"/>
+
+      <label for="food" style="display: block; margin-top: 10px"><b>Favorite Food:</b></label>
+      <select id="food" name="food">
+        <option value="tacos">Tacos</option>
+        <option value="sushi">Sushi</option>
+        <option value="pizza">Pizza</option>
+        <option value="noodles">Noodles</option>
+        <option value="icecream">Ice Cream</option>
+      </select>
+
+      <br/><br />
+      <button type="submit"><b>Submit</b></button>
+    </form>
+
+    <b><p>Check out our <a href="#">Photo Gallery</a> from last year!</p></b>
+  </body>
+</html>
