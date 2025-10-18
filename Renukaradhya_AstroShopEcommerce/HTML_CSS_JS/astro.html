@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AstroShop – Reports & Readings</title>
+  <link rel="icon" type="image/x-icon" href="./assets/Favicon.jpg" />
+  <link rel="stylesheet" href="astro.css" />
+  <style>
+    #phr:hover{
+        border: 2px outset black;
+        background-color: rgb(241, 177, 25);
+    }
+    #cr:hover{
+        background-color: rgb(241, 177, 25);
+    }
+    #cpg:hover{
+        background-color: rgb(241, 177, 25);
+    }
+    #cart{
+        font-family: sans-serif;
+        border:inset 2px rgb(255, 136, 0);
+        margin-left: 90%;
+        color:black;
+    }
+    header{
+        background-image: url('IMG.jpg');
+        opacity: 0.9;
+        width: 1264px;
+    }
+    #PR:hover{
+        background-color: rgb(241, 177, 25);
+    }
+    #cart:hover{
+      color: green;
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>AstroShop</h1>
+    <marquee><b><p style="text-shadow: 2px 2px 3px rgb(255, 217, 0);">Sell Reports & Readings</p></b></marquee>
+    <p style="text-shadow: 2px 2px 3px rgb(255, 217, 0);"><b>&#128717;Orders: <strong>0</strong> items</b></p>
+    <a href="#" id="cart"><b>&#128722;Cart:<strong>1</strong></b></a>
+  </header>
+  <main>
+    <section id="catalog">
+      <hr />
+      <h2>Product Catalog</h2>
+      <hr/>
+      <p>
+        <b>Browse our digital readings and PDF reports. Delivery via email as
+        downloadable PDF.</b>
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Product Name</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Price (₹)</th>
+            <th>Delivery</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="phr">
+              <img src="./assets/HR.jpg" width="75px" height="75" alt="Horoscope Report" />
+            </td>
+            <td id="phr">Personal Horoscope Report</td>
+            <td id="phr">
+              40+ page birth chart analysis including strengths, opportunities
+              and yearly transit highlights.
+            </td>
+            <td id="phr">Report (PDF)</td>
+            <td id="phr">999</td>
+            <td id="phr">Email (PDF)</td>
+          </tr>
+          <tr>
+            <td id="cr">
+              <img src="./assets/CR.jpg" width="75px" height="75" alt="Compatibility Reading" />
+            </td>
+            <td id="cr">Compatibility Reading</td>
+            <td id="cr">Synastry overview for two people with score and guidance.</td>
+            <td id="cr">Reading</td>
+            <td id="cr">799</td>
+            <td id="cr">Email (PDF)</td>
+          </tr>
+          <tr>
+            <td id="cpg">
+              <img src="./assets/CG.jpg" width="75px" height="75" alt="Career Guidance" />
+            </td>
+            <td id="cpg">Career Path Guidance</td>
+            <td id="cpg">
+              Profession indicators, suitable roles, and a six‑month timing
+              window.
+            </td>
+            <td id="cpg">Report (PDF)</td>
+            <td id="cpg">899</td>
+            <td id="cpg">Email (PDF)</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <br /><br>
+
+    <section id="request">
+      <hr />
+      <h2 id="PR">Purchase Request</h2>
+      <hr />
+      <p>Fill this form to place an order. We will confirm on email.</p>
+
+      <form>
+        <legend>Buyer Details:</legend>
+        <label for="buyer">Buyer Name</label>
+        <input id="buyer" placeholder="Enter buyer name" name="buyer" type="text" required />
+
+        <label for="email">Email</label>
+        <input id="email" placeholder="Enter buyer email" name="email" type="email" required />
+
+        <fieldset>
+          <legend>Order Details:</legend>
+          <label for="product">Product</label>
+          <select id="product" name="product" required>
+            <option value="">Select a product…</option>
+            <option>Personal Horoscope Report</option>
+            <option>Compatibility Reading</option>
+            <option>Career Path Guidance</option>
+          </select>
+
+          <label for="qty">Quantity:</label>
+          <input id="qty" name="qty" type="number" min="1" value="1" required />
+
+          <label for="lang">Preferred Language:</label>
+          <select id="lang" name="lang" required>
+            <option value="">Choose…</option>
+            <option>English</option>
+            <option>Hindi</option>
+            <option>Kannada</option>
+          </select>
+
+          <input id="urgent" name="urgent" type="checkbox" />
+          <label for="urgent">Urgent delivery?</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Billing:</legend>
+          <label for="address">Billing Address</label>
+          <textarea id="address" name="address" placeholder="House / Street, City, Pincode"></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Documents:</legend>
+          <label for="birthdoc">Upload Birth Details (PDF/IMG)</label>
+          <input id="birthdoc" name="birthdoc" type="file" accept=".pdf,image/*" />
+
+          <label for="refdoc">Upload Additional Document (optional)</label>
+          <input id="refdoc" name="refdoc" type="file" accept=".pdf,image/*" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Terms & Progress</legend>
+          <input id="terms" name="terms" type="checkbox" required />
+          <label for="terms">I accept the terms and privacy policy.</label>
+
+          <!-- <label for="progress">Order Completion (demo)</label>
+          <progress id="progress" value="30" max="100"></progress> -->
+        </fieldset>
+
+        <button type="submit"><b>Submit Request</b></button>
+        <button type="reset"><b>Reset</b></button>
+      </form>
+    </section><br><br>
+
+    <section id="downloads">
+      <h2>Downloads</h2>
+      <hr />
+          <a href="sample-report.pdf" download>• Download Sample Report (PDF)</a><br>
+          <a href="sample-invoice.pdf" download>• Download Sample Invoice (PDF)</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 AstroShop • Renukaradhya Odeyar CG</p>
+  </footer>
+
+  <script src="astro.js"></script>
+
+</body>
+
+</html>
