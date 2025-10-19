@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALLBACK</title>
+</head>
+<body>
+    <script>
+        function orderFood(callback){
+            setTimeout(()=>{
+                console.log("Food Ordered");
+                callback();
+            },1000);
+        }
+        function cookFood(callback){
+            setTimeout(()=>{
+                console.log("Food Cooked");
+                callback();
+            },1000);
+        }
+        function serveFood(callback){
+            setTimeout(()=>{
+                console.log("Food served");
+            },1000);
+        }
+
+        orderFood(()=>{
+            cookFood(()=>{
+                serveFood();
+            });
+        });
+        
+    </script>
+</body>
+</html>
