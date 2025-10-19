@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASYNC</title>
+</head>
+<body>
+    <script>
+         //-------------Async-----------------
+        console.log("Food Ordered");
+        setTimeout(()=>{
+            console.log("Food Cooked");
+
+            setTimeout(()=>{
+                console.log("Food Served");
+            },1000);
+        },1000);
+    </script>
+</body>
+</html>
