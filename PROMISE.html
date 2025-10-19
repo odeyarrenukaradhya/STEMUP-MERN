@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROMISE</title>
+</head>
+<body>
+    <h1>Using Promise</h1>
+    <script>
+        function orderFood(){
+            return new Promise(resolve=>{
+                setTimeout(()=>{
+                    console.log("Food Oredered");
+                    resolve();
+                },1000);
+            });
+        }
+
+        function cookFood(){
+            return new Promise(resolve=>{
+                setTimeout(()=>{
+                    console.log("Food Cooked");
+                    resolve();
+                },1000);
+            });
+        }
+
+        function serveFood(){
+            return new Promise(resolve=>{
+                setTimeout(()=>{
+                    console.log("Food served");
+                    resolve();
+                },1000);
+            });
+        }
+
+        //promise chaining: It is a process of chaining multiple process
+        orderFood()
+        .then(cookFood)
+        .then(serveFood)
+        .then(()=>console.log("✅DONE!"));
+
+
+    </script>
+</body>
+</html>
