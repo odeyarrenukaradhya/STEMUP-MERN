@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REJECT</title>
+</head>
+<body>
+    <script>
+        let FoodOrdered=true;
+        function orderFood(){
+            return new Promise((resolve,reject)=>{
+                if(FoodOrdered){
+                    setTimeout(()=>{
+                        resolve("Food Ordered");
+                    },1000);
+                }else{
+                    reject("Problem while ordering");
+                }
+            });
+        }
+
+        function cookFood(){
+            return new Promise(resolve=> {
+                setTimeout(()=>{
+
+                })
+                
+            })
+        }
+    </script>
+</body>
+</html>
