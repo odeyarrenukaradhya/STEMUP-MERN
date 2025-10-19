@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNCTIONS</title>
+</head>
+<body>
+    <script>
+        // function myDisplay(sum){
+        //     console.log(`${sum}`);
+        // }
+        // function calculate(a,b){
+        //     let c=a+b;
+        //     return c;
+        // }
+        // let result=calculate(5,6);
+        // myDisplay(result);
+
+        //-----------------------------
+
+        // function myDisplay(sum){
+        //     console.log(`${sum}`);
+        // }
+        // function calculate(a,b,callback1){
+        //     let c=a+b;
+        //     callback1(c);
+        // }
+        // calculate(5,6,myDisplay);
+
+        //------------------------------
+
+        const num=[1,2,3,4,5,6,-1,-2,-3,-4,0];
+        const pos=removeNeg(num,(x)=> x>=0);
+        function removeNeg(num,callback){
+            const myarray=[];
+            for (const x of num){
+                if(callback(x)){
+                    myarray.push(x);
+                }
+            }
+            return myarray;
+        }
+        console.log(pos);
+      
+    </script>
+</body>
+</html>
