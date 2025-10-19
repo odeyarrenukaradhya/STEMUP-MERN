@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASYNC/AWAIT</title>
+</head>
+<body>
+    <script>
+         function orderFood(){
+            return new Promise(resolve=>{
+                setTimeout(()=>{
+                    console.log("Food Oredered");
+                    resolve();
+                },1000);
+            });
+        }
+
+        function cookFood(){
+            return new Promise(resolve=>{
+                setTimeout(()=>{
+                    console.log("Food Cooked");
+                    resolve();
+                },1000);
+            });
+        }
+
+        function serveFood(){
+            return new Promise(resolve=>{
+                setTimeout(()=>{
+                    console.log("Food served");
+                    resolve();
+                },1000);
+            });
+        }
+        async function processOrder(){
+            await orderFood();
+            await cookFood();
+            await serveFood();
+            console.log("DONE!");
+        }
+        processOrder();
+    </script>
+</body>
+</html>
