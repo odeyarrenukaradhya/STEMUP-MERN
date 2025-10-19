@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="favicon.jpg">                
+</head>
+<body>
+    <script>
+        // console.log("Start");
+        // setTimeout(()=>console.log("This will execute"),10000);//here we used arrow function
+        // setInterval(()=>console.log("Testing"),1000)
+        // console.log("End");
+
+        // //---------------------setInterval and setTimeout---------------------------
+        // console.log("Start");
+        // setTimeout(()=>{
+        //     console.log("This will execute");
+        //     console.log("after ten seconds");
+        // }
+        // ,10000);//here without arrow function
+
+
+        // setInterval(()=>{console.log("Testing");
+        // console.log("testing1");},1000);
+
+
+        //----------------------clearInterval and clearTimeout--------------------------
+         let a=setInterval(()=>{console.log("testing");
+             console.log("Testing");
+         },1000);
+         let b=setTimeout(()=>{
+             console.log("This will execute");
+             console.log("after ten seconds");
+         },1000);
+
+         clearInterval(a)
+         clearTimeout(b)
+
+
+        //-------------------------Async------------------------
+         console.log("Start");
+         setTimeout(()=>{
+             console.log("step1");
+       
+         setTimeout(()=>{
+             console.log("step2");
+       
+         setTimeout(()=>{
+             console.log("step3");
+        
+         setTimeout(()=>{
+             console.log("step4");
+         },1000);
+         },1000);
+         },1000);
+         },1000);
+         console.log("End");
+
+
+        //----------queueMicrotask------------
+        console.log("First");
+        queueMicrotask(()=>console.log("Second"));
+        console.log("Third");
+        
+        
+
+
+        
+
+    </script>
+</body>
+</html>
