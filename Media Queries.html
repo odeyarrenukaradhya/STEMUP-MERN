@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            padding: 30px;
+            background-color:rgb(203, 255, 126);
+        }
+        
+        #media{
+            color: rgb(0, 0, 0);
+        }
+
+        marquee{
+            color: rgb(40, 143, 40);
+            background-color: rgb(249, 177, 126);
+            border:inset 2px orange;
+            border-radius: 5%;
+        }
+
+        .box{
+            padding: 40px;
+            margin:20px;
+            background-color: coral;
+            font-size: 24px;
+            border: outset;
+            border-radius: 10px;
+        }
+        .box:hover{
+            background-color: rgb(97, 213, 217);
+        }
+
+        /*mobile screen(max-width:600px)*/
+        @media Screen and(max-width:600px){
+        body{
+            background-color: #ffe0e0;
+        }
+        .box{
+            background-color: tomato;
+            font-size: 18px;
+        }
+    }
+
+    /*Tablet screen(601px-900px)*/
+    @media screen and(min-width:600px) and(max-width:900px){
+        body{
+            background-color: #e0ffe0;
+        }
+        .box{
+            background-color: limegreen;
+            font-size: 20px;
+        }
+    }
+
+    /*Desktop Screen(901px and above)*/
+    @media Screen and(min-width:901px){
+        body{
+             background-color: #e0f0ff;
+        }
+        .box{
+            background-color:royalblue;
+            font-size: 24px;
+        }
+    }
+
+      /*Orientation landscape*/
+    @media Screen and(min-width:901px){
+        .box{
+             border:5px solid black;
+        }
+    }
+
+    /*print*/
+    @media print{
+        body{
+            background-color: rgb(112, 200, 244);
+            color:rgb(0, 0, 0);
+        }
+        .box{
+            background-color: rgb(228, 128, 232);
+            color: black;
+            font-size: 16px;
+        }
+    }
+
+
+    </style>
+
+</head>
+<body>
+    <h1 id="media">CSS Media Queries Demonstration</h1>
+    <marquee>THESE ARE CSS MEDIA QUERIES</marquee>
+    <div class="box">
+    Resize the window or change device to see the effect.
+    </div>
+</body>
+</html>
