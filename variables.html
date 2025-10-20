@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 2</title>
+    
+</head>
+<body>
+    <script>
+        // Declarating Global Scope , Function Scope and Block Scope 
+        
+        //------- GLobal Scope ---------- 
+        console.log("Global Function :");
+        var gLobalVar="I am Var in Global Scope" ;
+        let gLobalLet="I am Let in Global Scope";
+        const globalConst="I am Const in Global Scope";
+        console.log("Global Scope");
+        console.log(gLobalVar); //Accesible
+        console.log(gLobalLet); //Accesible
+        console.log(globalConst); //Accesible
+
+        //------- Functon Scope ---------
+        function testFunctionScope(){
+            var funVar="I am Var in Function Scope";
+            let funLet="I am Let in Function Scope";
+            const funConst="I am Const in Function Scope";
+            console.log("\nInside Function :");
+            console.log(funVar); //Accesible inside Function
+            console.log(funLet); //Accesible inside Function
+            console.log(funConst); //Accesible inside Function
+        }
+        testFunctionScope();
+        // console.log(funVar); //Error: funVar not defined outside function
+        // console.log(funLet); //Error: funLet not defined outside function
+        // console.log(funConst); //Error: funConst not defined outside function
+
+        //--------- Block Code ---------
+        {
+            var blockVar="I am Var in Block";
+            let blockLet="I am Let in Block";
+            const blockConst="I am Const in Block";
+            console.log("\n Inside Block :");
+            console.log(blockVar); //Accesible
+            console.log(blockLet); //Accesible only Inside Block
+            console.log(blockConst); //Accesible only Inside Block
+        }
+        console.log("\n Outside Block :");
+        console.log(blockVar); //Accesible (var is NOT block Scoped)
+        // console.log(blockLet); //Error: blockLet not defined outside 
+        // console.log(blockConst); //Error: blockConst id not defined Outside
+    </script>
+</body>
+</html>
