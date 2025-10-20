@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tag{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1tag">the color of this text is black now</h1>
+    <h2 id="h2tag">the color of this text is black now</h2>
+    <button onclick="changecolor()">change color</button>
+    <script>
+       function changecolor(){
+            document.getElementById("h1tag").innerHTML="<p style='color:green'>The color of this text is green now</p>"//using inline CSS
+            document.getElementById("h2tag").innerHTML="<p class='tag'>The color of this text is green now</p>"//using internal CSS
+        }
+    </script>
+</body>
+</html>
