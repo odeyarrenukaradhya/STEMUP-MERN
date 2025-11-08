@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAYS</title>
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+        //Arrays in javascript
+        //-------------------------
+
+        //1.DECLARING and DEFINING arrays
+        //Arrays can hold multiple values inside square brackets[]
+        let fruits=["Apple","Banana","Orange"];
+        let numbers=[10,20,30,40,50];
+        let mixed=[100,'Hello',3.14,true]
+        document.getElementById("result").innerText=numbers;
+        console.log("initial fruits array",fruits);
+        console.log("Numbers array",numbers);
+        console.log("mixed array",mixed);
+
+        //2.ACCESSING array elements(Index starts from 0)
+        console.log("\accessing elements");
+        console.log("First fruit:",fruits[0]);//apple
+        console.log("Second number:",numbers[1]);//20
+        console.log("Mixed value:",mixed[2]);
+
+        //3.MODIFYING array elements
+        fruits[1]="Mango";
+        numbers[4]=99;//change last element
+        console.log("\nAfter modifivation");
+        console.log("updated fruits:",fruits);
+        console.log("updated numbers:",numbers);
+
+        //4.ARRAY LENGTH property
+        console.log("\nLength of Fruits Array:",fruits.length);
+
+        //5.ITERATING through arrays
+        //(a)Using traditional for loop
+        console.log("\nIterating with for loop:");
+        for(let i=0;i<fruits.length;i++){
+            console.log("Fruits at index",i,":",fruits);
+        }
+
+        //(b)Using for...of loop(easier syntax)
+        console.log("\nIterating with for..of loop");
+        for(let fruit of fruits){
+            console.log(fruit);
+        }
+
+        //(c)Using forEach method(callback function)
+        console.log("\Iterating with forEach method:");
+        fruits.forEach((fruit,index)=>{
+            console.log("Index",index,"has",fruit);
+        });
+
+        //6.ADDING new elements
+        fruits.push("Pineapple");//Add to the end
+        fruits.unshift("Strawberry");//Add to the beginning
+        console.log("\nAfter Adding Elements:",fruits);
+
+        //7.REMOVING elements
+        fruits.pop(); //Remove last element
+        fruits.shift(); //remove first element
+        console.log("after removing elements:",fruits);
+    </script>
+</body>
+</html>
